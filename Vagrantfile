@@ -99,6 +99,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provision 'docker' do |docker|
     docker.pull_images 'ubuntu:14.04'
+    docker.build_image '/vagrant', args: '-t sshd'
   end
 
   # Enable provisioning with chef server, specifying the chef server URL,
