@@ -102,11 +102,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #   chef.json = { mysql_password: "foo" }
   # end
 
-  config.vm.provision 'docker' do |docker|
-    docker.pull_images 'ubuntu:14.04'
-    docker.build_image '/vagrant', args: '-t sshd'
-    docker.run 'sshd', demonize: true, args: '-P'
-  end
+  # config.vm.provision 'docker' do |docker|
+  #   docker.pull_images 'ubuntu:14.04'
+  #   docker.build_image '/vagrant', args: '-t sshd'
+  #   docker.run 'sshd', demonize: true, args: '-P'
+  # end
 
   # Enable provisioning with chef server, specifying the chef server URL,
   # and the path to the validation key (relative to this Vagrantfile).
