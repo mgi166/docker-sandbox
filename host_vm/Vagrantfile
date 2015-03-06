@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
     v.functional_vboxsf     = false
   end
 
-  config.vm.network :forwarded_port, guest: 22, host: 22
+  config.vm.network :forwarded_port, guest: 8080, host: 8080
 
   ["vmware_fusion", "vmware_workstation"].each do |vmware|
     config.vm.provider vmware do |v|
